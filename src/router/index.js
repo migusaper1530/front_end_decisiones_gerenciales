@@ -1,0 +1,19 @@
+import { createRouter, createWebHistory } from 'vue-router'
+import HomeView from '../views/HomeView.vue'
+import MyCoursesView from '../views/MyCoursesView.vue'
+import ProfileView from '../views/ProfileView.vue'
+import AnalyticsView from '../views/AnalyticsView.vue'
+
+const router = createRouter({
+  history: createWebHistory(),
+  routes: [
+    { path: '/', name: 'home', component: HomeView, meta: { title: 'Inicio' } },
+    { path: '/mis-cursos', name: 'courses', component: MyCoursesView, meta: { title: 'Mis cursos' } },
+    { path: '/perfil', name: 'profile', component: ProfileView, meta: { title: 'Perfil' } },
+    { path: '/analiticas', name: 'analytics', component: AnalyticsView, meta: { title: 'Analíticas' } },
+    { path: '/:pathMatch(.*)*', redirect: '/' },
+  ],
+  scrollBehavior: () => ({ top: 0 }),
+})
+
+export default router
