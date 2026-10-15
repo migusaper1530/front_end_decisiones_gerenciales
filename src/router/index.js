@@ -1,11 +1,11 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import MyCoursesView from '../views/MyCoursesView.vue'
 import ProfileView from '../views/ProfileView.vue'
 import AnalyticsView from '../views/AnalyticsView.vue'
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(import.meta.env.BASE_URL),
   routes: [
     { path: '/', name: 'home', component: HomeView, meta: { title: 'Inicio' } },
     { path: '/mis-cursos', name: 'courses', component: MyCoursesView, meta: { title: 'Mis cursos' } },
