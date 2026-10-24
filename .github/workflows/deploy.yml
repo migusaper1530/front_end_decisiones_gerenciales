@@ -35,6 +35,8 @@ jobs:
           cache: true
       - name: Instalar dependencias
         run: pnpm install --frozen-lockfile
+      - name: Probar administración de usuarios
+        run: pnpm run test:admin
       - name: Compilar sitio
         run: pnpm run build
       - name: Configurar GitHub Pages

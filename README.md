@@ -10,7 +10,9 @@ Mockup funcional de una plataforma de aprendizaje entre pares para estudiantes d
 - Calendario de cursos elegidos.
 - Perfil con carrera, intereses, reputación, puntos y cursos impartidos.
 - Analíticas personales de aprendizaje y contribución.
+- Diseño Red universitaria con Sora y Source Sans 3 alojadas localmente.
 - Diseño adaptable y navegación accesible.
+- Administración demostrativa de usuarios: altas, bajas, búsqueda, filtros y paginación.
 
 ## Tecnologías
 
@@ -34,6 +36,24 @@ Abrir la dirección indicada por Vite, normalmente `http://localhost:5173`.
 
 ```bash
 npm run build
+```
+
+## Administración de usuarios
+
+Abre `/#/administracion` o selecciona **Admin · Demo** en el menú.
+Permite agregar estudiantes y dar de baja usuarios conservando sus registros.
+Los cambios se guardan en el almacenamiento local de ese navegador y origen;
+no se crean cuentas reales ni se modifica una base de datos. El acceso a esta
+vista es público dentro del mockup y no representa autorización real por rol.
+
+Las carreras y usuarios incluidos son datos de demostración. La autenticación,
+los permisos ADMIN y las operaciones persistentes dependen de la integración
+futura con Backend.
+
+## Pruebas de administración
+
+```bash
+npm run test:admin
 ```
 
 ## Publicar en GitHub Pages
@@ -72,4 +92,4 @@ Los datos de prueba se encuentran en `src/data/mockData.js`. El estado demostrat
 
 ## Alcance
 
-Este proyecto es un mockup de Frontend. No implementa autenticación, persistencia, cálculos analíticos del servidor ni base de datos.
+Este proyecto es un mockup de Frontend. No implementa autenticación real, persistencia en servidor, cálculos analíticos del servidor ni base de datos. La administración utiliza únicamente almacenamiento local del navegador.
